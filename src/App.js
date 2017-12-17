@@ -1,10 +1,10 @@
-import React from "react";
-import Father from './components/Father'
+import React from 'react';
+import Father from './components/Father';
 
 export default class App extends React.Component {
     // No need to declare an empty constructor
 
-    render () {
+    render() {
         return (
             <div>
                 <Father />
@@ -12,4 +12,3 @@ export default class App extends React.Component {
         );
     }
 }
-    

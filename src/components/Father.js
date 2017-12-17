@@ -1,11 +1,9 @@
-import React from "react";
+import React from 'react';
 import './Father.css';
-import Child from './Child'
-
+import Child from './Child';
 
 export default class Father extends React.Component {
-
-    render () {
+    render() {
         return (
             <div>
                 <h3>React Playground</h3>
