@@ -1,13 +1,15 @@
+'use strict';
 import React from 'react';
-import Father from './components/Father';
+import Header from './Header';
+import Main from './Main';
+import './App.css';
 
 export default class App extends React.Component {
-    // No need to declare an empty constructor
-
     render() {
         return (
             <div>
-                <Father />
+                <Header />
+                <Main />
             </div>
         );
     }
