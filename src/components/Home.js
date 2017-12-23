@@ -1,4 +1,3 @@
-'use strict';
 import React from 'react';
 import { Grid, ListGroup, ListGroupItem } from 'react-bootstrap';
 import { Link } from 'react-router-dom';

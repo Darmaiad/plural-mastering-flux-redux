@@ -1,4 +1,3 @@
-'use strict';
 import React from 'react';
 import './Header.css';
 import { Grid, Nav, Navbar, NavItem } from 'react-bootstrap';
