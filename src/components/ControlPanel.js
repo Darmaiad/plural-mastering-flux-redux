@@ -1,14 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Grid, ControlLabel, FormGroup, Radio } from 'react-bootstrap';
 
 const ControlPanel = props => {
     const handleNameChange = event => {
-        // Actions.userNameUpdate(event.target.value);
         props.onNameChange(event.target.value);
     };
 
     const handleFontSizeChange = event => {
-        // Actions.fontSizePreferenceUpdate(event.target.value);
         props.onFontSizeChange(event.target.value);
     };
 
@@ -18,7 +17,7 @@ const ControlPanel = props => {
         fontSize: props.controlPanel.fontSize === 'small' ? '16px' : '24px',
     };
 
-    return ( // TODO: PROP types TODO: Local storage
+    return ( // TODO: Local storage
         <Grid className={controlPanelClasses} style={controlPanelStyles}>
             <h1>Control Panel</h1>
             <p>
@@ -55,6 +54,15 @@ const ControlPanel = props => {
             </FormGroup>
         </Grid>
     );
+};
+
+ControlPanel.propTypes = {
+    onNameChange: PropTypes.func,
+    onFontSizeChange: PropTypes.func,
+    controlPanel: PropTypes.shape({
+        userName: PropTypes.string,
+        fontSize: PropTypes.string,
+    }),
 };
 
 export default ControlPanel;
