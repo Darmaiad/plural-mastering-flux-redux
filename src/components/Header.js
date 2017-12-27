@@ -1,5 +1,4 @@
 import React from 'react';
-import './Header.css';
 import { Grid, Nav, Navbar, NavItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Link } from 'react-router-dom';
