@@ -1,5 +1,4 @@
-'use strict';
-import ActionTypes from './../types/ControlPanelActionTypes';
+import ActionTypes from './../types/TasksActionTypes';
 import Dispatcher from './../../ProductivityDispatcher';
 
 const TasksActions = {
@@ -22,6 +21,12 @@ const TasksActions = {
             type: ActionTypes.COMPLETE_TASK,
             id,
             value: isComplete,
+        });
+    },
+
+    revertLastState() {
+        Dispatcher.dispatch({
+            type: ActionTypes.REVERT_LAST_STATE,
         });
     },
 };

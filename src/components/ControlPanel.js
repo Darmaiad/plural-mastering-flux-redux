@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Grid, ControlLabel, FormGroup, Radio } from 'react-bootstrap';
+import { Grid, ControlLabel, FormGroup, FormControl, Radio } from 'react-bootstrap';
 
 const ControlPanel = props => {
     const handleNameChange = event => {
@@ -17,7 +17,7 @@ const ControlPanel = props => {
         fontSize: props.controlPanel.fontSize === 'small' ? '16px' : '24px',
     };
 
-    return ( // TODO: Local storage
+    return (
         <Grid className={controlPanelClasses} style={controlPanelStyles}>
             <h1>Control Panel</h1>
             <p>
@@ -25,9 +25,8 @@ const ControlPanel = props => {
             </p>
 
             <FormGroup>
-                <input
+                <FormControl
                     type="text"
-                    className="form-control"
                     placeholder="Update Your Username"
                     onChange={handleNameChange}
                 />
