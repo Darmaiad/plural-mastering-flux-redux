@@ -4,6 +4,7 @@ import Home from './Home';
 import ControlPanelContainer from './../containers/ControlPanelContainer';
 import TasksContainer from './../containers/TasksContainer';
 import MessageBoard from './MessageBoard';
+// import MessageBoardContainer from './../containers/MessageBoardContainer';
 import NoMatch from './NoMatch';
 
 export default class Main extends React.Component {
