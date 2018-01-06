@@ -8,19 +8,22 @@ class ControlPanelReduceStore extends ReduceStore {
     }
 
     getInitialState() {
-		return {
-			userName: 'George',
-			fontSize: 'small',
-		};
-	}
+        return localStorage['preferences'] ? JSON.parse(localStorage['preferences']) : {
+            userName: 'George',
+            fontSize: 'small',
+        };
+    }
 
     reduce(state, action) {
         switch (action.type) {
             case ActionTypes.UPDATE_USERNAME:
-                return { ...state, userName: action.value, };
+                localStorage['preferences'] = JSON.stringify({ ...state, userName: action.value, });
+                return JSON.parse(localStorage['preferences']);
 
-			case ActionTypes.UPDATE_FONT_SIZE_PREFERENCE:
-                return { ...state, fontSize: action.value, };
+            case ActionTypes.UPDATE_FONT_SIZE_PREFERENCE:
+                localStorage['preferences'] = JSON.stringify({ ...state, fontSize: action.value, });
+                return JSON.parse(localStorage['preferences']);
+                // return { ...state, fontSize: action.value, };
 
             default:
                 return state;
