@@ -3,7 +3,7 @@ import { get } from './../../../http';
 import Store from './../../Store';
 
 const MessageBoardActions = {
-    statusUpdate(value) { // TODO: add enum checking
+    statusUpdate(value) {
         return {
             type: ActionTypes.UPDATE_STATUS,
             value,

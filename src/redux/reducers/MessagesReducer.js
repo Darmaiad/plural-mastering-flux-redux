@@ -4,8 +4,7 @@ import defaultState from './../defaultState';
 const MessagesReducer = (state = defaultState.messages, { type, value, postedBy, date }) => {
     switch (type) {
         case ActionTypes.CREATE_NEW_MESSAGE:
-            const newState = [{ date: date, postedBy, content: value }, ...state];
-            return newState;
+            return [{ date: date, postedBy, content: value }, ...state];
         default:
             return state;
     }

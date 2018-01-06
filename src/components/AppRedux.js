@@ -3,7 +3,8 @@ import { Provider } from 'react-redux';
 import MessageBoardContainer from './../containers/MessageBoardContainer';
 import Store from './../redux/Store';
 
-// export default class AppRedux extends React.Component {
+// A wrapper component to pass the store to the Message board Container
+// and subsribe it to the Store changes
 const AppRedux = () => {
     return (
         <Provider store={Store} >
