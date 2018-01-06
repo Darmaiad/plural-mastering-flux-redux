@@ -1,5 +1,3 @@
-'use strict';
-
 const Status = {
      ONLINE: 'ONLINE',
      AWAY: 'AWAY',

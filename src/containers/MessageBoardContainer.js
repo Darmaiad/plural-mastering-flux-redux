@@ -1,12 +1,26 @@
-import React from 'react';
-import Store from './../redux/Store';
+import { connect } from 'react-redux';
+import Actions from './../redux/actions/creators/MessageBoardActions';
+import MessageBoard from './../components/MessageBoard';
 
-export default class MessageBoardContainer extends React.Component {
-    render() {
-        return (
-            <div>
-                <h1>Message Board</h1>
-            </div>
-        );
-    }
-}
+const mapStateToProps = state => ({
+    userStatus: state.userStatus,
+    messages: state.messages,
+    apiCommunicationStatus: state.apiCommunicationStatus,
+});
+
+const mapDispatchToProps = dispatch => ({
+    onUserStatusChange: e => {
+        dispatch(Actions.statusUpdate(e.target.value));
+    },
+    onNewMessage: messageContent => {
+        const username = localStorage['preferences'] ? JSON.parse(localStorage['preferences']).userName : 'Klaniol';
+        dispatch(Actions.newMessage(messageContent, username));
+    },
+});
+
+const MessageBoardContainer = connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(MessageBoard);
+
+export default MessageBoardContainer;

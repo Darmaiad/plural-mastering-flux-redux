@@ -1,4 +1,3 @@
-'use strict';
 import Status from './Status';
 import ApiStatus from './ApiStatus';
 

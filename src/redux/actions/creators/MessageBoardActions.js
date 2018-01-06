@@ -1,4 +1,3 @@
-'use strict';
 import ActionTypes from './../types/MessageBoardTypes';
 import { get } from './../../../http';
 import Store from './../../Store';

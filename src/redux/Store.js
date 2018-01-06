@@ -1,4 +1,3 @@
-'use strict';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 import UserStatusReducer from './reducers/UserStatusReducer';
@@ -14,4 +13,3 @@ const combinedReducer = combineReducers({
 const Store = createStore(combinedReducer, applyMiddleware(logger));
 
 export default Store;
-
