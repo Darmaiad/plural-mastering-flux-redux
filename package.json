@@ -1,7 +1,13 @@
 {
-  "name": "react-playground",
-  "version": "0.1.0",
+  "name": "pluralsight-mastering-flux-redux",
+  "version": "1.0.0",
   "private": true,
+  "description": "Re-implementation of the project developed in the Pluralsight course: Mastering Flux & Redux by Daniel Stern",
+  "author": "Darmaiad",
+  "repository": {
+        "type": "git",
+        "url": "https://github.com/Darmaiad/pluralsight-mastering-flux-redux.git"
+  },
   "dependencies": {
     "flux": "^3.1.3",
     "prop-types": "^15.6.0",
