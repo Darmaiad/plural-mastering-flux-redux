@@ -1,7 +1,6 @@
 {
   "name": "pluralsight-mastering-flux-redux",
   "version": "1.0.0",
-  "private": true,
   "description": "Re-implementation of the project developed in the Pluralsight course: Mastering Flux & Redux by Daniel Stern",
   "author": "Darmaiad",
   "repository": {
